@@ -1,7 +1,12 @@
+import { Helmet } from "react-helmet";
+
 export default function SJPrivacyPolicy() {
 
   return (
     <>
+      <Helmet>
+        <title>Simple Journal | Privacy Policy</title>
+      </Helmet>
       <div className="">
         <p><strong>Privacy Policy</strong></p>
         <p>Last updated: August 18, 2024<br />
@@ -88,7 +93,7 @@ export default function SJPrivacyPolicy() {
         <p><strong>Contact Us</strong></p>
         <p>If you have any questions about this Privacy Policy, You can contact us:</p>
         <ul>
-          <li>By email: dev.afzalansari@gmail.com</li>
+          <li>By email: <a href="mailto:dev.afzalansari@gmail.com">dev.afzalansari@gmail.com</a></li>
         </ul>
       </div>
     </>
