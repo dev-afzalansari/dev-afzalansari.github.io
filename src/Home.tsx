@@ -1,24 +1,38 @@
-import { Link } from "react-router-dom"
-import { Helmet } from "react-helmet"
-
+import { Helmet } from 'react-helmet'
+import Footer from './components/Footer'
+import { LinkCardBox } from './components/LinkCards'
 
 export default function Home() {
+  return (
+    <>
+      <Helmet>
+        <title>Afzal Ansari</title>
+      </Helmet>
+      <div className="flex-grow flex flex-col">
+        <h1 className="text-5xl mt-6 mb-6 text-gray-title dark:text-white-title">
+          Afzal Ansari
+        </h1>
+        <p className="text-gray-text dark:text-white-text text-xl">
+          I am a Developer based in Nepal.
+        </p>
 
-    return (
-      <>
-        <Helmet>
-          <title>Afzal Ansari</title>
-        </Helmet>
-        <div className="h-full w-full flex justify-center">
-          <div className="max-w-3xl w-[768px] pl-2">
-            <h1 className="text-4xl mt-4 mb-2">Afzal Ansari</h1>
-            <p>I am a Developer.</p>
-            <p>Browse my <Link to='/projects'>Projects</Link></p>
+        <LinkCardBox
+          contents={[
+            {
+              link: '/projects',
+              title: 'Projects',
+              description: 'Browse my Projects.'
+            },
+            {
+              link: '/contact',
+              title: 'Contact',
+              description: 'Get in touch.'
+            }
+          ]}
+        />
 
-            <p>Connect with me on <a href="https://x.com/afzalansari_dev" >X</a>.</p>
-          </div>
-        </div>
-      </>
-    )
-  }
-  
+        <Footer />
+      </div>
+    </>
+  )
+}
