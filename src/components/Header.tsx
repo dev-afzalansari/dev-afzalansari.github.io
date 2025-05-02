@@ -19,7 +19,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="w-full my-1">
+      <div className="w-full my-1 text-gray-title dark:text-white-title hover:text-blue-prime dark:hover:text-blue-prime">
         <Link to={returnToData.link} className="flex">
           <FaArrowLeft fontSize={20} />
           <p className="ml-1">{returnToData.title}</p>
