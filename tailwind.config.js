@@ -5,11 +5,6 @@ export default {
   ],
   theme: {
     extend: {
-      Screen: {
-        sm: '360px',
-        md: '600px',
-        lg: '1024px'
-      },
       colors: {
         'white-background': "#f4f4f4",
         'black-background': "#222831",

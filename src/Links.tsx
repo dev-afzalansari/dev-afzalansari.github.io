@@ -81,12 +81,12 @@ export function ContactLinkCard({
 }) {
   return (
     <>
-      <div className="w-full flex flex-row justify-evenly flex-wrap mt-4 overflow-auto">
+      <div className="w-full flex flex-row flex-wrap justify-evenly mt-4 overflow-auto px-2 sm:px-0">
         {content.map(data => {
           return (
             <a
               href={data.link}
-              className="flex flex-row items-center w-[48%] mb-2 py-1 px-2 text-4xl text-gray-text dark:text-white-text border-2 rounded-md border-gray-text dark:border-white-text hover:border-blue-prime dark:hover:border-blue-prime hover:opacity-90 dark:hover:opacity-90"
+              className="flex flex-row items-center w-full sm:w-[48%] mb-2 py-1 px-2 text-2xl sm:text-4xl text-gray-text dark:text-white-text border-2 rounded-md border-gray-text dark:border-white-text hover:border-blue-prime dark:hover:border-blue-prime hover:opacity-90 dark:hover:opacity-90"
               target="_blank"
             >
               <data.Icon />{' '}

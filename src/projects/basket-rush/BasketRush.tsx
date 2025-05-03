@@ -162,7 +162,7 @@ export function ProjectsHeader({
 
 export function ProjectScreenshots({ images }: { images: string[] }) {
   return (
-    <>
+    <div className="w-full max-w-full min-w-full overflow-hidden px-4">
       <h2 className="text-gray-text dark:text-white-text font-semibold mt-4">
         Screenshots
       </h2>
@@ -170,41 +170,36 @@ export function ProjectScreenshots({ images }: { images: string[] }) {
         arrows
         swipeable
         showDots
-        slidesToSlide={1}
         infinite={false}
         additionalTransfrom={0}
+        containerClass="py-4"
+        itemClass="px-2"
+        slidesToSlide={1}
+        renderButtonGroupOutside={false}
         responsive={{
           desktop: {
-            breakpoint: {
-              max: 3000,
-              min: 1024
-            },
-            items: 3,
-            partialVisibilityGutter: 40
-          },
-          mobile: {
-            breakpoint: {
-              max: 464,
-              min: 0
-            },
-            items: 1,
-            partialVisibilityGutter: 30
+            breakpoint: { max: 3000, min: 1024 },
+            items: 3
           },
           tablet: {
-            breakpoint: {
-              max: 1024,
-              min: 464
-            },
-            items: 2,
-            partialVisibilityGutter: 30
+            breakpoint: { max: 1024, min: 464 },
+            items: 2
+          },
+          mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1
           }
         }}
       >
-        {images.map(imageSrc => (
-          <img src={imageSrc} className="w-40" />
+        {images.map((src, i) => (
+          <img
+            key={i}
+            src={src}
+            className="w-full max-w-[300px] h-auto mx-auto rounded-md object-contain"
+          />
         ))}
       </Carousel>
-    </>
+    </div>
   )
 }
 

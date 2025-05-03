@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
+
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 
@@ -61,22 +62,22 @@ export function ProjectsLinkCard({
 }) {
   return (
     <>
-      <div className="w-full flex flex-col mt-4 overflow-auto">
+      <div className="w-full flex flex-col mt-4 overflow-auto px-2 sm:px-0">
         {content.map(data => {
           return (
             <Link
               to={data.link}
-              className="flex flex-row px-4 py-4 mb-4 border-2 border-gray-text dark:border-white-text hover:border-blue-prime dark:hover:border-blue-prime hover:opacity-90 dark:hover:opacity-90 rounded-md"
+              className="flex flex-row px-3 py-2 mb-2 sm:px-4 sm:py-4 sm:mb-4 border-2 border-gray-text dark:border-white-text hover:border-blue-prime dark:hover:border-blue-prime hover:opacity-90 dark:hover:opacity-90 rounded-md"
             >
-              <img src={data.icon} className="h-28 rounded-md" />
+              <img src={data.icon} className="h-24 sm:h-28 rounded-md" />
               <div className="ml-2 flex flex-col h-full w-full">
-                <h2 className="text-lg flex items-center mb-[2px] font-semibold text-gray-title dark:text-white-title">
+                <h2 className="text-[16px] sm:text-lg flex items-center mb-[2px] font-semibold text-gray-title dark:text-white-title">
                   {data.title}{' '}
                   {data.platform === 'Android' ? (
-                    <BsAndroid2 className="ml-2" fontSize={16} />
+                    <BsAndroid2 className="ml-2 text-[14px] sm:text-[16px]" />
                   ) : null}
                 </h2>
-                <p className="text-gray-text dark:text-white-text">
+                <p className="text-gray-text dark:text-white-text line-clamp-2">
                   {data.shortDescription}
                 </p>
                 <p className="text-sm flex mt-auto text-gray-text dark:text-white-text">

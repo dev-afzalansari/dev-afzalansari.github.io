@@ -10,12 +10,14 @@ export default function Home() {
         <title>Afzal Ansari</title>
       </Helmet>
       <div className="flex-grow flex flex-col">
-        <h1 className="text-5xl mt-6 mb-6 text-gray-title font-bold dark:text-white-title">
-          Afzal Ansari
-        </h1>
-        <p className="text-gray-text dark:text-white-text text-xl">
-          I am a Developer based in Nepal.
-        </p>
+        <div className="pl-2 sm:pl-0">
+          <h1 className="text-4xl sm:text-5xl mt-6 mb-6 text-gray-title font-bold dark:text-white-title">
+            Afzal Ansari
+          </h1>
+          <p className="text-gray-text dark:text-white-text text-lg sm:text-xl">
+            I am a Developer based in Nepal.
+          </p>
+        </div>
 
         <HomeLinkCard
           contents={[
@@ -42,12 +44,12 @@ type HomeLinkCardContent = { title: string; description: string; link: string }
 
 function HomeLinkCard({ contents }: { contents: HomeLinkCardContent[] }) {
   return (
-    <div className="w-full flex justify-evenly my-auto">
+    <div className="w-full flex flex-wrap justify-evenly my-auto">
       {contents.map(data => {
         return (
           <Link
             to={data.link}
-            className="w-56 pt-4 pr-4 pb-6 pl-4 border-2 border-gray-text dark:border-white-text hover:border-blue-prime hover:dark:border-blue-prime hover:opacity-90 dark:hover:opacity-90 rounded-md"
+            className="w-56 min-w-40 pt-2 pr-2 pb-4 pl-2 sm:pt-4 sm:pr-4 sm:pb-6 sm:pl-4 mb-2 border-2 border-gray-text dark:border-white-text hover:border-blue-prime hover:dark:border-blue-prime hover:opacity-90 dark:hover:opacity-90 rounded-md"
             id="link-card-box"
           >
             <h2
