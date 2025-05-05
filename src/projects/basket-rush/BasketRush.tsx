@@ -124,12 +124,12 @@ export function ProjectsHeader({
   return (
     <>
       <div className="w-full flex px-1 mt-4">
-        <img src={Icon} className="h-32 rounded-md" />
+        <img src={Icon} className="h-24 sm:h-32 rounded-md" />
         <div className="ml-2 flex flex-col w-full">
-          <h2 className="text-3xl flex items-center mb-[2px] font-bold text-gray-title dark:text-white-title">
+          <h2 className="text-2xl sm:text-3xl flex items-center mb-[2px] font-bold text-gray-title dark:text-white-title">
             {title}
           </h2>
-          <p className="text-lg text-gray-text dark:text-white-text">
+          <p className="text-sm sm:text-lg text-gray-text dark:text-white-text">
             {shortDescription}
           </p>
           <div className="mt-auto">
@@ -162,8 +162,8 @@ export function ProjectsHeader({
 
 export function ProjectScreenshots({ images }: { images: string[] }) {
   return (
-    <div className="w-full max-w-full min-w-full overflow-hidden px-4">
-      <h2 className="text-gray-text dark:text-white-text font-semibold mt-4">
+    <div className="w-full max-w-full min-w-full overflow-hidden px-1 sm:px-0">
+      <h2 className="text-gray-text dark:text-white-text font-semibold mt-4 px-1 sm:px-0">
         Screenshots
       </h2>
       <Carousel
@@ -210,11 +210,13 @@ export function ProjectDescription({
 }) {
   return (
     <>
-      <div className="mt-4 mb-4">
+      <div className="mt-4 mb-4 px-2 sm:px-0">
         <h2 className="text-gray-text dark:text-white-text font-semibold mt-4 mb-2">
           Description
         </h2>
-        <div className="text-gray-text dark:text-white-text">{children}</div>
+        <div className="text-gray-text dark:text-white-text text-sm sm:text-base">
+          {children}
+        </div>
       </div>
     </>
   )

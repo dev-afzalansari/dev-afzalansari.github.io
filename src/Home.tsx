@@ -49,7 +49,7 @@ function HomeLinkCard({ contents }: { contents: HomeLinkCardContent[] }) {
         return (
           <Link
             to={data.link}
-            className="w-56 min-w-40 pt-2 pr-2 pb-4 pl-2 sm:pt-4 sm:pr-4 sm:pb-6 sm:pl-4 mb-2 border-2 border-gray-text dark:border-white-text hover:border-blue-prime hover:dark:border-blue-prime hover:opacity-90 dark:hover:opacity-90 rounded-md"
+            className="w-72 mx-2 sm:mx-0 sm:w-56 min-w-40 pt-2 pr-2 pb-4 pl-2 sm:pt-4 sm:pr-4 sm:pb-6 sm:pl-4 mb-2 border-2 border-gray-text dark:border-white-text hover:border-blue-prime hover:dark:border-blue-prime hover:opacity-90 dark:hover:opacity-90 rounded-md"
             id="link-card-box"
           >
             <h2

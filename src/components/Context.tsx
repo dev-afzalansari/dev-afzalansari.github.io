@@ -34,7 +34,7 @@ export default function Context({ children }: { children: ReactElement }) {
       >
         <div
           id="container"
-          className="max-w-3xl w-[768px] h-full flex flex-col"
+          className="max-w-3xl w-[768px] min-w-[200px] h-full flex flex-col"
         >
           {children}
         </div>
