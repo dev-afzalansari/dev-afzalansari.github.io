@@ -7,7 +7,7 @@ export default {
     extend: {
       colors: {
         'white-background': "#f4f4f4",
-        'black-background': "#222831",
+        'black-background': "#060608",
         'blue-prime': '#84beff',
         'gray-text': "#393e46",
         'gray-title': "#283739",
